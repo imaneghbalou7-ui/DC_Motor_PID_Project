@@ -1,0 +1,4 @@
+Controller,Kp,Ki,Kd,GainMargin_dB,PhaseMargin_deg,GainCrossover_rad_s,PhaseCrossover_rad_s
+P,5,0,0,Inf,Inf,NaN,Inf
+PI,3,15,0,Inf,64.3215520030861,1.29023056776902,Inf
+PID,4,20,0.05,Inf,60.0511740267091,1.60668391760934,NaN

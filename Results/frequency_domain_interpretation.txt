@@ -1,0 +1,48 @@
+AUTOMATIC FREQUENCY-DOMAIN INTERPRETATION
+==========================================
+
+This report summarizes the frequency-domain analysis of the P, PI and PID controllers.
+
+P CONTROLLER ANALYSIS
+---------------------
+The P controller does not exhibit a finite phase margin under the selected operating conditions.
+The P controller does not provide integral action, which explains its inability to completely eliminate the steady-state tracking error observed in the time-domain analysis.
+
+PI CONTROLLER ANALYSIS
+----------------------
+The PI controller provides a phase margin of 64.32 degrees, indicating a good stability reserve.
+The gain crossover frequency is 1.2902 rad/s.
+The integral action improves steady-state tracking accuracy by eliminating or strongly reducing persistent steady-state error.
+
+PID CONTROLLER ANALYSIS
+-----------------------
+The PID controller provides a phase margin of 60.05 degrees, indicating a good stability reserve.
+The gain crossover frequency is 1.6067 rad/s.
+The derivative action contributes to improved transient performance by increasing the dynamic bandwidth of the controlled system. However, it also increases sensitivity to measurement noise, which is why derivative filtering was introduced in the Simulink implementation.
+
+PI vs PID COMPARISON
+--------------------
+The PI controller has a higher phase margin (64.32 degrees) than the PID controller (60.05 degrees).
+The PID controller has a higher gain crossover frequency (1.6067 rad/s) than the PI controller (1.2902 rad/s).
+A higher gain crossover frequency generally indicates a larger closed-loop bandwidth and faster dynamic response.
+
+NUMERICAL COMPARISON
+--------------------
+The PI phase margin is 4.27 degrees higher than the PID phase margin.
+The PID gain crossover frequency is 0.3165 rad/s higher than the PI gain crossover frequency.
+This corresponds to an increase of approximately 24.53% in the gain crossover frequency.
+
+FINAL FREQUENCY-DOMAIN CONCLUSION
+---------------------------------
+The frequency-domain analysis reveals a clear trade-off between dynamic speed and stability reserve.
+The PID controller provides a higher gain crossover frequency, indicating a larger bandwidth and faster potential dynamic response.
+The PI controller provides a higher phase margin, indicating a slightly larger stability reserve.
+Therefore, the PID controller is preferable when faster dynamic performance is prioritized, while the PI controller may be preferred when a larger stability margin and simpler controller structure are desired.
+
+RELATION BETWEEN TIME-DOMAIN AND FREQUENCY-DOMAIN RESULTS
+------------------------------------------------------------
+The frequency-domain results should be interpreted together with the time-domain performance indicators obtained from the automated P, PI and PID simulations.
+The PID controller exhibits a higher gain crossover frequency than the PI controller. This is consistent with the faster transient response observed in the time-domain analysis.
+The PI controller exhibits a slightly higher phase margin, which indicates a larger stability reserve under the selected operating conditions.
+The combined time-domain and frequency-domain analyses therefore provide a more complete evaluation of the P, PI and PID control strategies.
+

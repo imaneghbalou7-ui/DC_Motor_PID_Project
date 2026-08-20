@@ -1,0 +1,4 @@
+Controller,Kp_values,Ki_values,Kd_values,NumberOfPoles,MaxRealPole,DominantPoleReal,DominantPoleImag,Stability
+P,5,0,0,2,-3.5545961478725,-3.5545961478725,0,Stable
+PI,3,15,0,3,-1.19038982927899,-1.19038982927899,1.30450294528484,Stable
+PID,4,20,0.05,3,-1.24029028217774,-1.24029028217774,1.61862136507963,Stable
